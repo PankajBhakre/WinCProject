@@ -5,15 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { AssignmentComponent } from './assignment/assignment.component';
-import { EvenComponent } from './even/even.component';
-import { OddComponent } from './odd/odd.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AssignmentComponent,
-    EvenComponent,
-    OddComponent
+    AssignmentComponent
   ],
   imports: [
     BrowserModule,
