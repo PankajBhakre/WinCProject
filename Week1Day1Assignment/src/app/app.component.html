@@ -1,14 +1,4 @@
-<div class="container">
-  <div class="form-group">
-    <div>
-      <label>Enter Any Text</label>
-    <input type="text" name="txtName" [(ngModel)]="txtName" class="form-control">
-    </div>
-    <br>
-    <div>{{txtName}}</div>
-  </div>
-  <br>
-  <div class="form-group">
-    <button class="btn btn-primary" (click)="onReset()">Reset</button>
-  </div>
-</div>
+ <app-assignment (firedInterval)="seriseFunction($event)"></app-assignment>
+ 
+
+ 
