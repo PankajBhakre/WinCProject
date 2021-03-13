@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="form-group">
+        <div>
+      <button class="btn btn-info" (click)="onButtonClick()">Display Details</button>
+      <br>
+      <p *ngIf="isVisible">Secret Password: tuna</p>
+      <div *ngFor="let counter of All">
+        <div appHighlight [count]="counter"  *ngIf="counter%2==0">{{ counter }}</div> 
+         <div appHighlight [count]="counter" *ngIf="counter%2!==0">{{ counter }}</div>
+      </div>
+        </div>
+    </div>
+  </div>
+  <hr>
+  <div class="container">
+      <div class="row">
+          <button class="btn btn-success" (click)="OddNumberClick()">Show Only Odd Numbers</button>
+      </div>
+      <div *ngFor="let odd of oddNumbers">
+        <ng-container *appUnless="!show">
+          {{odd}}
+        </ng-container> 
+    </div>
+  </div>

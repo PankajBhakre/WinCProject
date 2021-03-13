@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, ElementRef, Input, OnInit, Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-assignment',
@@ -6,32 +6,28 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./assignment.component.css']
 })
 export class AssignmentComponent implements OnInit {
-  txtName : string;
+
   isVisible: boolean = false;
   counter: number = 1
   All: number[] = [];
   oddNumbers: number[] = [1, 3, 5];
   show: boolean = false
 
-  
-  
   constructor() { }
 
   ngOnInit(): void {
   }
 
-
-  onReset(){
-    this.txtName="";
-  }
   onButtonClick(){
     this.All.push(this.counter);
     this.isVisible =! this.isVisible
    return this.counter = this.counter +1; 
+
   }
 
   OddNumberClick(){
-  this.oddNumbers = this.oddNumbers;
-  this.show  = true;
-  }
+    this.oddNumbers = this.oddNumbers;
+    this.show  = !this.show;
+    }
+
 }
